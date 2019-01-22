@@ -1,0 +1,46 @@
+---
+title: "Homework #1"
+author: "xiwang; wolfgangwx"
+date: "01/17/19"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Consideration of data science
+
+From my perspective, data science is a combination discipline of computer science and statistic, which helps people have not only an integrated understanding of the structure of dataset but also the enlarge many kinds of way to process and analyze the data. Although the analysis tools such as **[R]([https://www.r-project.org])**, **[Python](https://www.python.org/)**, and **[SAS](https://www.sas.com)** can be varied,  it will eventually contribute to the understanding and interpretation of the data.
+
+#### Such as 
+[R](https://www.r-project.org)
+```{r fig.width=1, fig.height=1,echo=FALSE,warning=FALSE}
+library(png)
+library(grid)
+r <- readPNG("C:\\Users\\Wolfgang\\Desktop\\ds202_hw1\\R.png")
+ grid.raster(r)
+```
+
+[Python](https://www.python.org/)
+```{r fig.width=1, fig.height=1,echo=FALSE,warning=FALSE}
+library(png)
+library(grid)
+python <- readPNG("C:\\Users\\Wolfgang\\Desktop\\ds202_hw1\\python.png")
+ grid.raster(python)
+```
+
+[SAS](https://www.sas.com)
+```{r fig.width=1, fig.height=1,echo=FALSE,warning=FALSE}
+library(png)
+library(grid)
+sas <- readPNG("C:\\Users\\Wolfgang\\Desktop\\ds202_hw1\\sas.png")
+ grid.raster(sas)
+```
+
+
+## Check R version
+```{r version}
+version
+```
+
