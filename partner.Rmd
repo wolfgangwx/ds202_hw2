@@ -1,0 +1,33 @@
+---
+title: "Partner.Rmd"
+author: "xiwang"
+date: "01/24/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Partner information
+#### Partner name: Zihao Han
+#### GitHub username: Zhan17
+
+## Partner's commit information
+### the commit "add hw" was added by partner
+##### tree aed662d4ca5ca9165ac6bf92bf2918c82bc6d22a
+##### parent e489b7627ccfda284f69aadc9077011d5108ed78
+##### author Zihao Han <zhan17@iastate.edu> 1548359930 -0600
+##### committer Zihao Han <zhan17@iastate.edu> 1548359930 -0600
+##### add hw
+
+## Error in RmarkDown
+##### The file cannot be run successfully, but there is just a minor error with the picture's directory
+##### pandoc.exe: Could not fetch C:\Users\h8438\Desktop\finalprojectscreenshoot1.png
+##### C:\Users\h8438\Desktop\finalprojectscreenshoot1.png: openBinaryFile: does not exist (No such file or directory)
+##### Error: pandoc document conversion failed with error 67
+##### Execution halted
+
+## Tips 
+##### To remove and replace the picture link with an online link, the error can be eliminated 
+
