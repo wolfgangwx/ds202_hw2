@@ -1,0 +1,96 @@
+---
+title: "ds202_hw2"
+author: "xiwang"
+date: "02/05/19"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#R commands
+
+##Question 1
+
+Today¡¯s temperature has a high of 15 and a low of -10 degree fahrenheit. Find the corresponding degress in celsius and storage it in a (single) vector named cel. Print the variable.
+
+```{r}
+f <- c(15,-10)
+cel <- 5/9 * (f - 32)
+cel
+```
+
+##Question 2
+
+Create a vector of length 200. The odd entries should be 1 and even entries should be 0. Storage the created in a variable named vec200 and print.
+
+```{r}
+vec200 <- rep (c(1,0), length.out=200)
+vec200
+```
+
+##Question 3
+
+How many perfect squares are there between 1 and 1001? Storage the answer in a variable named numPerfect and print. 
+
+
+```{r}
+sqrt <- sqrt(1:1001)
+round <- round (sqrt,digits = 0)
+table <- as.data.frame(table(round))
+numPerfect <-  length (table$round)
+numPerfect
+```
+
+#Cars and mileage
+
+## Question 1
+What are the 3 most fuel-efficient models in terms of highway mileage? Storage the data frame (with 3 rows) containing all information of these three cars in a variable named top3 and print.
+
+```{r}
+library(ggplot2)
+sort <- mpg[order(-mpg$hwy), ]
+top3 <- head(sort,3)
+top3
+```
+
+## Question 2
+How many different compact models are included in this dataset? Storage the answer in a variable named numCompact and print.
+
+```{r}
+names (mpg)
+summary (mpg$model)
+table1 <- as.data.frame(table(mpg$model))
+numCompact <-  length (table1$Var1)
+numCompact
+```
+
+
+
+## Question 3
+Create a scatterplot of hwy and cty and describe the relationship. Why are there so few points visible?
+
+```{r}
+plot((mpg$hwy),(mpg$cty))
+```
+
+##### There is positive relationship between hwy and cty variables
+##### Plots refere to the types of cars in which some cars have the same value
+
+
+## Question 4
+Are cars in 2008 more fuel efficient than cars in 1999? Use graphs and summary statistics to answer this question.
+
+```{r}
+dathwy <- mpg$hwy
+
+box<- boxplot((dathwy[mpg$year==1999]),(dathwy[mpg$year==2008]),names=c("1999","2008"))
+h99 <- dathwy[mpg$year==1999]
+h08 <- dathwy[mpg$year==2008]
+summary (h99)
+summary (h08)
+
+```
+##### According to the result, it shows 2008 more fuel efficient than cars in 1999.
+
